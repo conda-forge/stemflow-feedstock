@@ -1,5 +1,5 @@
 {% set name = "stemflow" %}
-{% set version = "1.0.7" %}
+{% set version = "1.0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 27937a7a25ab5999e62f1b079d9a56a24496b9359128c5863d04e770a0961d55
+  sha256: 8f29e1353cf4eec654db56a2b4013745206bcf6d197276a7b748a04d2637f479
 
 build:
   noarch: python
