@@ -52,7 +52,7 @@ about:
     stemflow is a toolkit for Adaptive Spatio-Temporal Model (AdaSTEM) in python. 
     A typical usage is daily abundance estimation using eBird citizen science data. 
     It leverages the "adjacency" information of surrounding target values in space and time, 
-    to predict the classes/continues values of target spatial-temporal point.
+    to predict the classes/continuous values of target spatial-temporal points.
 
 extra:
   recipe-maintainers:
