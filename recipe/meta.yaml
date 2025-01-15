@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: bad0d3f9e1f32b3e0e0799e6858745b9dfbafa368b242f7e477ff02344d6f397
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools >=65.0.0
 
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - matplotlib-base >=3.7.1
     - numpy >=1.24.3, <2
     - pandas >=2.0.3
@@ -36,6 +36,7 @@ test:
     - stemflow
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
